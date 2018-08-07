@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/s-sarthak/Laravel-Notification-Channel-KarixSms.svg?branch=master)](https://travis-ci.org/s-sarthak/Laravel-Notification-Channel-KarixSms)
 [![StyleCI](https://github.styleci.io/repos/143913511/shield?branch=master)](https://github.styleci.io/repos/143913511)
+[![GitHub license](https://img.shields.io/github/license/s-sarthak/Laravel-Notification-Channel-KarixSms.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-KarixSms/blob/master/LICENSE.md)
+[![GitHub stars](https://img.shields.io/github/stars/s-sarthak/Laravel-Notification-Channel-KarixSms.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-KarixSms/stargazers)
+
 
 
 This package makes it easy to send sms via [Karix.io](https://karix.io) with Laravel 5.4+.
