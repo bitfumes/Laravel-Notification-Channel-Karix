@@ -2,18 +2,16 @@
 
 namespace NotificationChannels\Karix;
 
-use Illuminate\Notifications\Notification;
-use Swagger\Client\Model\CreateMessage;
-use Swagger\Client\Api\MessageApi;
 use GuzzleHttp\Client;
+use Illuminate\Notifications\Notification;
+use Swagger\Client\Api\MessageApi;
 use Swagger\Client\Configuration;
+use Swagger\Client\Model\CreateMessage;
 
 class KarixSmsChannel
 {
     /**
      * The Karix client instance.
-     *
-     *
      */
     protected $config;
 
@@ -21,7 +19,8 @@ class KarixSmsChannel
      * Create a new Karix channel instance.
      *
      *
-     * @param  string  $from
+     * @param string $from
+     *
      * @return void
      */
     public function __construct()
@@ -32,8 +31,8 @@ class KarixSmsChannel
     /**
      * Send the given notification.
      *
-     * @param  mixed  $notifiable
-     * @param  \Illuminate\Notifications\Notification  $notification
+     * @param mixed                                  $notifiable
+     * @param \Illuminate\Notifications\Notification $notification
      */
     public function send($notifiable, Notification $notification)
     {
@@ -63,8 +62,10 @@ class KarixSmsChannel
     {
         $messageApi = app(MessageApi::class);
         $apiInstance = new $messageApi(new Client(), $this->config);
+
         try {
             $result = $apiInstance->sendMessage($version, $message);
+
             return $result;
         } catch (Exception $e) {
             echo 'Exception when calling MessageApi->createMessage: ', $e->getMessage(), PHP_EOL;
@@ -76,6 +77,7 @@ class KarixSmsChannel
         $config = new Configuration();
         $config->setUsername(config('services.karix.id'));
         $config->setPassword(config('services.karix.token'));
+
         return $config;
     }
 }

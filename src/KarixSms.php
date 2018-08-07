@@ -26,14 +26,14 @@ class KarixSms
     public $from;
 
     /**
-     * Setting Up the app version
+     * Setting Up the app version.
      *
      * @var string
      */
     public $version = '1.0';
 
     /**
-     * Setting Up the timezone
+     * Setting Up the timezone.
      *
      * @var string
      */
@@ -52,7 +52,8 @@ class KarixSms
     /**
      * Set the message content.
      *
-     * @param  string  $content
+     * @param string $content
+     *
      * @return $this
      */
     public function content($content)
@@ -65,7 +66,8 @@ class KarixSms
     /**
      * Set the phone number the message should be sent from.
      *
-     * @param  string  $from
+     * @param string $from
+     *
      * @return $this
      */
     public function from($from)
@@ -90,12 +92,14 @@ class KarixSms
     public function version($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
     public function timezone($zone)
     {
         $this->timezone = $zone;
+
         return $this;
     }
 }
