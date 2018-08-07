@@ -7,7 +7,7 @@
 
 
 
-This package makes it easy to send sms via [Karix.io](https://karix.io) with Laravel 5.4+.
+This package makes it easy to send sms via [Karix.io](karix.io) with Laravel 5.4+.
 
 ## Installation
 
