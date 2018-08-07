@@ -1,0 +1,36 @@
+{
+    "name": "laravel-notification-channels/karix",
+    "description": "Allow you to use karix sms as custom channel in laravel notifications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "s-sarthak",
+            "email": "sarthak@bitfumes.com"
+        }
+    ],
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/karixtech/karix-php.git"
+    }],
+    "require": {
+        "karixtech/karix-php": "0.0.2",
+        "illuminate/notifications": "^5.8@dev",
+        "illuminate/support": "^5.8@dev",
+        "phpunit/phpunit": "^7.4@dev",
+        "mockery/mockery": "^1.0@dev",
+        "orchestra/testbench": "^3.8@dev",
+        "orchestra/database": "^3.8@dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Karix\\":"src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Karix\\Tests\\": "tests"
+        }
+    }
+}
