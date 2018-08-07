@@ -2,11 +2,11 @@
 
 namespace NotificationChannels\Karix\Tests;
 
-use Illuminate\Notifications\Notification;
-use NotificationChannels\Karix\KarixSms;
-use NotificationChannels\Karix\KarixSmsChannel;
 use Orchestra\Testbench\TestCase;
 use Swagger\Client\Api\MessageApi;
+use NotificationChannels\Karix\KarixSms;
+use Illuminate\Notifications\Notification;
+use NotificationChannels\Karix\KarixSmsChannel;
 
 class ChannelTest extends TestCase
 {

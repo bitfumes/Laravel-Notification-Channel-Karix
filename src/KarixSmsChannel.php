@@ -3,10 +3,10 @@
 namespace NotificationChannels\Karix;
 
 use GuzzleHttp\Client;
-use Illuminate\Notifications\Notification;
-use Swagger\Client\Api\MessageApi;
 use Swagger\Client\Configuration;
+use Swagger\Client\Api\MessageApi;
 use Swagger\Client\Model\CreateMessage;
+use Illuminate\Notifications\Notification;
 
 class KarixSmsChannel
 {
@@ -36,7 +36,7 @@ class KarixSmsChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (!$to = $notifiable->routeNotificationFor('karix', $notification)) {
+        if (! $to = $notifiable->routeNotificationFor('karix', $notification)) {
             return;
         }
 
