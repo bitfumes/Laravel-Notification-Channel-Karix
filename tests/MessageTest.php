@@ -2,8 +2,8 @@
 
 namespace NotificationChannels\Karix\Tests;
 
-use Orchestra\Testbench\TestCase;
 use NotificationChannels\Karix\KarixSms;
+use Orchestra\Testbench\TestCase;
 
 class MessageTest extends TestCase
 {
@@ -16,8 +16,8 @@ class MessageTest extends TestCase
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function it_can_set_message_content()
     {
         $content = 'Hello World';
@@ -26,8 +26,8 @@ class MessageTest extends TestCase
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function it_can_set_message_to()
     {
         $number = '+919090909090';
@@ -36,8 +36,8 @@ class MessageTest extends TestCase
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function it_can_set_message_from()
     {
         $from = '+919090909090';
@@ -46,8 +46,8 @@ class MessageTest extends TestCase
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function it_can_set_message_api_version()
     {
         $api = '1.0';
@@ -56,8 +56,8 @@ class MessageTest extends TestCase
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function it_can_set_message_timezone()
     {
         $timezone = 'New Timezone';
