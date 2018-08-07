@@ -2,8 +2,8 @@
 
 namespace NotificationChannels\Karix\Tests;
 
-use NotificationChannels\Karix\KarixSms;
 use Orchestra\Testbench\TestCase;
+use NotificationChannels\Karix\KarixSms;
 
 class MessageTest extends TestCase
 {
