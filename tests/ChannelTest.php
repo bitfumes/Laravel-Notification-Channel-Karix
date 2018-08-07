@@ -2,10 +2,10 @@
 
 namespace NotificationChannels\Karix\Tests;
 
-use Orchestra\Testbench\TestCase;
-use NotificationChannels\Karix\KarixSmsChannel;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Karix\KarixSms;
+use NotificationChannels\Karix\KarixSmsChannel;
+use Orchestra\Testbench\TestCase;
 use Swagger\Client\Api\MessageApi;
 
 class ChannelTest extends TestCase
@@ -16,8 +16,8 @@ class ChannelTest extends TestCase
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function it_can_send_a_notification()
     {
         $this->app['config']->set('services.karix.id', 'TrelloId');
