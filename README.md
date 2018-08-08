@@ -1,9 +1,9 @@
 # Karix Sms notifications channel for Laravel 5.4+
 
-[![Build Status](https://travis-ci.org/s-sarthak/Laravel-Notification-Channel-KarixSms.svg?branch=master)](https://travis-ci.org/s-sarthak/Laravel-Notification-Channel-KarixSms)
+[![Build Status](https://travis-ci.org/s-sarthak/Laravel-Notification-Channel-Karix.svg?branch=master)](https://travis-ci.org/s-sarthak/Laravel-Notification-Channel-Karix)
 [![StyleCI](https://github.styleci.io/repos/143913511/shield?branch=master)](https://github.styleci.io/repos/143913511)
-[![GitHub license](https://img.shields.io/github/license/s-sarthak/Laravel-Notification-Channel-KarixSms.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-KarixSms/blob/master/LICENSE.md)
-[![GitHub stars](https://img.shields.io/github/stars/s-sarthak/Laravel-Notification-Channel-KarixSms.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-KarixSms/stargazers)
+[![GitHub license](https://img.shields.io/github/license/s-sarthak/Laravel-Notification-Channel-Karix.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-Karix/blob/master/LICENSE.md)
+[![GitHub stars](https://img.shields.io/github/stars/s-sarthak/Laravel-Notification-Channel-Karix.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-Karix/stargazers)
 
 
 
@@ -13,7 +13,7 @@ This package makes it easy to send sms via [Karix.io](karix.io) with Laravel 5.4
 
 You can install the package via composer:
 ``` bash
-composer require laravel-notification-channels/karix-sms
+composer require bitfumes/karix-notification-channel
 ```
 
 ### Setting up the Karix id and token
@@ -36,20 +36,20 @@ add your Karix Id and Token to your `config/services.php`:
 Now you can use the channel in your `via()` method inside the notification:
 
 ``` php
-use NotificationChannels\Karix\KarixSmsChannel;
-use NotificationChannels\Karix\KarixSms;
+use Bitfumes\KarixNotificationChannel\KarixChannel;
+use Bitfumes\KarixNotificationChannel\KarixMessage;
 use Illuminate\Notifications\Notification;
 
 class YourNotification extends Notification
 {
     public function via($notifiable)
     {
-        return [KarixSmsChannel::class];
+        return [KarixChannel::class];
     }
 
     public function toKarix($notifiable)
     {
-        return KarixSms::create()
+        return KarixMessage::create()
                         ->to('+1XXXXXXXXXX')
                         ->from('+1XXXXXXXXXX')
                         ->content('Your message comes here');

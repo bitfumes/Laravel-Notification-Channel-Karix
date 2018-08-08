@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Karix;
+namespace Bitfumes\KarixNotificationChannel;
 
 use GuzzleHttp\Client;
 use Swagger\Client\Configuration;
@@ -8,7 +8,7 @@ use Swagger\Client\Api\MessageApi;
 use Swagger\Client\Model\CreateMessage;
 use Illuminate\Notifications\Notification;
 
-class KarixSmsChannel
+class KarixChannel
 {
     /**
      * The Karix client instance.

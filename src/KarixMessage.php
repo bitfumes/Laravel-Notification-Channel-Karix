@@ -1,8 +1,8 @@
 <?php
 
-namespace NotificationChannels\Karix;
+namespace Bitfumes\KarixNotificationChannel;
 
-class KarixSms
+class KarixMessage
 {
     /**
      * The message to.

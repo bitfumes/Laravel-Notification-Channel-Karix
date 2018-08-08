@@ -1,5 +1,5 @@
 {
-    "name": "laravel-notification-channels/karix",
+    "name": "bitfumes/karix-notification-channel",
     "description": "Allow you to use karix sms as custom channel in laravel notifications",
     "type": "library",
     "license": "MIT",
@@ -27,12 +27,12 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\Karix\\":"src"
+            "Bitfumes\\KarixNotificationChannel\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\Karix\\Tests\\": "tests"
+            "Bitfumes\\KarixNotificationChannel\\Tests\\": "tests"
         }
     }
 }

@@ -3,7 +3,7 @@
 namespace NotificationChannels\Karix\Tests;
 
 use Orchestra\Testbench\TestCase;
-use NotificationChannels\Karix\KarixSms;
+use Bitfumes\KarixNotificationChannel\KarixMessage;
 
 class MessageTest extends TestCase
 {
@@ -12,7 +12,7 @@ class MessageTest extends TestCase
     public function setup()
     {
         parent::setUp();
-        $this->message = new KarixSms();
+        $this->message = new KarixMessage();
     }
 
     /**

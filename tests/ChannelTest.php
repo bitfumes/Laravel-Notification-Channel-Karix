@@ -4,9 +4,9 @@ namespace NotificationChannels\Karix\Tests;
 
 use Orchestra\Testbench\TestCase;
 use Swagger\Client\Api\MessageApi;
-use NotificationChannels\Karix\KarixSms;
 use Illuminate\Notifications\Notification;
-use NotificationChannels\Karix\KarixSmsChannel;
+use Bitfumes\KarixNotificationChannel\KarixChannel;
+use Bitfumes\KarixNotificationChannel\KarixMessage;
 
 class ChannelTest extends TestCase
 {
@@ -25,7 +25,7 @@ class ChannelTest extends TestCase
 
         $this->app->instance(MessageApi::class, FakeMessageApi::class);
 
-        $channel = new KarixSmsChannel();
+        $channel = new KarixChannel();
         $result = $channel->send(new FakeNotifiable(), new FakeNotification());
         $this->assertTrue($result);
     }
@@ -47,7 +47,7 @@ class FakeNotification extends Notification
 {
     public function toKarix($notifiable)
     {
-        return KarixSms::create()->from('+916261686349')
+        return KarixMessage::create()->from('+916261686349')
                                 ->to('+916261686349')
                                 ->content('hello');
     }
