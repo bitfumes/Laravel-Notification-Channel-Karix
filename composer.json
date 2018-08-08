@@ -14,7 +14,9 @@
         "url": "https://github.com/karixtech/karix-php.git"
     }],
     "require": {
-        "karixtech/karix-php": "0.0.2",
+        "karixtech/karix-php": "0.0.2"
+    },
+    "require-dev": {
         "illuminate/notifications": "^5.8@dev",
         "illuminate/support": "^5.8@dev",
         "phpunit/phpunit": "^7.4@dev",
