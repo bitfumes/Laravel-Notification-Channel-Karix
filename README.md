@@ -50,7 +50,6 @@ class YourNotification extends Notification
     public function toKarix($notifiable)
     {
         return KarixMessage::create()
-                        ->to('+1XXXXXXXXXX')
                         ->from('+1XXXXXXXXXX')
                         ->content('Your message comes here');
     }
@@ -62,10 +61,12 @@ In order to let your Notification know that there is a new channel called KarixS
 
 This method needs to return email of the user (if it's a private board) and the list ID of the Trello list to add the card to.
 
+Caveat : Make sure you have a 'phone' field in your table for which you are using this.
+
 ```php
 public function routeNotificationForKarix()
 {
-    return $this->email;
+    return $this->phone;
 }
 ```
 
