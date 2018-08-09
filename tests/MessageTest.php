@@ -32,7 +32,7 @@ class MessageTest extends TestCase
     {
         $number = '+919090909090';
         $this->message->to($number);
-        $this->assertEquals($this->message->to, $number);
+        $this->assertEquals($this->message->to, [$number]);
     }
 
     /**
