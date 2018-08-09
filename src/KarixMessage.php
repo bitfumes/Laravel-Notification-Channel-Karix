@@ -84,8 +84,7 @@ class KarixMessage
      */
     public function to($to)
     {
-        $this->to = $to;
-
+        $this->to = is_array($to) ? $to : [$to];
         return $this;
     }
 

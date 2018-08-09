@@ -46,7 +46,7 @@ class KarixChannel
         // Set Timezone
         $this->timezone($message_data->timezone);
         // Set Message Body
-        $destination = $to ? [$to] : $message_data->to;
+        $destination = $message_data->to ? $message_data->to : [$to];
         $message->setDestination($destination);
         $message->setSource($message_data->from);
         $message->setText($message_data->content);
