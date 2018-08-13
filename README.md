@@ -6,7 +6,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/s-sarthak/Laravel-Notification-Channel-Karix.svg)](https://github.com/s-sarthak/Laravel-Notification-Channel-Karix/stargazers)
 
 
-
 This package makes it easy to send sms via [Karix.io](karix.io) with Laravel 5.4+.
 
 ## Installation
